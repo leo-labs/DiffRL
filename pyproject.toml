@@ -9,10 +9,10 @@ description = "Differentiable Reinforcement Learning"
 requires-python = ">=3.8"
 
 dependencies = [
-    "pyyaml==6.0",
+    "pyyaml",
     "tensorboard",
     "tensorboardX",
-    "urdfpy==0.0.22",
+    "urdfpy",
     # deactivated because of version conflicts, probably not needed for our usecase
     #"usd-core==22.3"
 ]
