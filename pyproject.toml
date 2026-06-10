@@ -13,7 +13,8 @@ dependencies = [
     "tensorboard==2.8.0",
     "tensorboardX==2.5",
     "urdfpy==0.0.22",
-    "usd-core==22.3",
+    # deactivated because of version conflicts, probably not needed for our usecase
+    #"usd-core==22.3",
     "protobuf==3.20.0",
 ]
 
