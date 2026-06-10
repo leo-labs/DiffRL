@@ -37,4 +37,6 @@ class CriticMLP(nn.Module):
         print(self.critic)
 
     def forward(self, observations):
+        print(observations)
+        print(observations.shape)
         return self.critic(observations)
