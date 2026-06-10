@@ -33,18 +33,19 @@ from utils.time_report import TimeReport
 from utils.average_meter import AverageMeter
 
 class SHAC:
-    def __init__(self, cfg):
-        env_fn = getattr(envs, cfg["params"]["diff_env"]["name"])
+    def __init__(self, cfg, env):
+        # env_fn = getattr(envs, cfg["params"]["diff_env"]["name"])
 
-        seeding(cfg["params"]["general"]["seed"])
-        self.env = env_fn(num_envs = cfg["params"]["config"]["num_actors"], \
-                            device = cfg["params"]["general"]["device"], \
-                            render = cfg["params"]["general"]["render"], \
-                            seed = cfg["params"]["general"]["seed"], \
-                            episode_length=cfg["params"]["diff_env"].get("episode_length", 250), \
-                            stochastic_init = cfg["params"]["diff_env"].get("stochastic_env", True), \
-                            MM_caching_frequency = cfg["params"]['diff_env'].get('MM_caching_frequency', 1), \
-                            no_grad = False)
+        # seeding(cfg["params"]["general"]["seed"])
+        # self.env = env_fn(num_envs = cfg["params"]["config"]["num_actors"], \
+        #                     device = cfg["params"]["general"]["device"], \
+        #                     render = cfg["params"]["general"]["render"], \
+        #                     seed = cfg["params"]["general"]["seed"], \
+        #                     episode_length=cfg["params"]["diff_env"].get("episode_length", 250), \
+        #                     stochastic_init = cfg["params"]["diff_env"].get("stochastic_env", True), \
+        #                     MM_caching_frequency = cfg["params"]['diff_env'].get('MM_caching_frequency', 1), \
+        #                     no_grad = False)
+        self.env = env
 
         print('num_envs = ', self.env.num_envs)
         print('num_actions = ', self.env.num_actions)
