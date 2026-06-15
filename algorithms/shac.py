@@ -550,7 +550,7 @@ class SHAC:
         np.save(open(os.path.join(self.log_dir, 'episode_length_his.npy'), 'wb'), self.episode_length_his)
 
         # evaluate the final policy's performance
-        self.run(self.num_envs)
+        # self.run(self.num_envs)
 
         self.close()
     
